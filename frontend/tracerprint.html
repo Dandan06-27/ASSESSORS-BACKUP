@@ -66,6 +66,49 @@
       <div class="footer-note">Toledo City Assessor Office</div>
       <div class="footer-meta" id="footerMeta"></div>
     </div>
+
+    <!-- Signature Section with Fields and Prepared By -->
+    <div class="signature-section">
+      <div class="fields">
+        <div class="field-row"><span class="field-label">PAID UNDER OR NO:</span> <input id="tracer-or-number" type="text" class="field-input" placeholder="" /></div>
+        <div class="field-row"><span class="field-label">AMOUNT PAID</span> <input id="tracer-amount-paid" type="text" class="field-input" placeholder="" /></div>
+        <div class="field-row"><span class="field-label">DATE ISSUED</span> <span id="tracer-date-issued-field" class="field-input"></span></div>
+      </div>
+
+      <div class="prepared-section">
+        <div class="prepared-label">Prepared by:</div>
+        <select id="tracer-prepared-by-select" onchange="updateTracerPreparedBy()" class="prepared-select">
+          <option value="april-espera" data-name="April Rose A. Espera" data-title="Admn Aide-I">Jestony Daniel M. Tampus</option>
+          <option value="custom" data-name="Custom Entry" data-title="">Custom Entry</option>
+        </select>
+        <div class="prepared-name" id="tracer-prepared-by-name">Jestony Daniel M Tampus</div>
+        <div class="prepared-title" id="tracer-prepared-by-title">Developer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Entry Modal -->
+  <div id="customEntryModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Enter Custom Information</h2>
+        <span class="modal-close" onclick="closeCustomEntryModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-form-group">
+          <label for="customEntryName">Name:</label>
+          <input type="text" id="customEntryName" placeholder="Enter name" />
+        </div>
+        <div class="modal-form-group">
+          <label for="customEntryTitle">Title:</label>
+          <input type="text" id="customEntryTitle" placeholder="Enter title" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn modal-cancel" onclick="closeCustomEntryModal()">Cancel</button>
+        <button class="modal-btn modal-submit" onclick="saveCustomEntry()">Save</button>
+      </div>
+    </div>
   </div>
 
   <script src="./tracerprint.js"></script>

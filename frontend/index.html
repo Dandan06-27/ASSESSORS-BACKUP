@@ -124,7 +124,7 @@
             <button type="button" data-nav="records" class="nav-btn">Records</button>
             <button type="button" data-nav="property-records" class="nav-btn">Property Records</button>
             <button type="button" data-nav="view-land" class="nav-btn">View land</button>
-            <button type="button" id="nav-add-record" data-nav="add-record" class="nav-btn admin-only">Add record</button>
+            <button type="button" id="nav-add-record" data-nav="add-record" class="nav-btn hidden">Add record</button>
             <button type="button" data-nav="admin" class="nav-btn staff-only hidden">Administration</button>
             <button type="button" data-nav="org" class="nav-btn org-only hidden">Org chart</button>
           </nav>
@@ -288,7 +288,12 @@
                   <th rowspan="2">Actions</th>
                 </tr>
                 <tr class="arp-sub">
-                  <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th>
+                  <th>City<br><small></small></th>
+                  <th>District<br><small></small></th>
+                  <th>Barangay<br><small></small></th>
+                  <th>Section<br><small></small></th>
+                  <th>Parcel<br><small></small></th>
+                  <th>Bldg/Mch<br><small></small></th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -456,6 +461,17 @@
       <button type="button" class="modal-close" data-close-modal>&times;</button>
       <h3>RPU Record</h3>
       <div id="view-rpu-body"></div>
+    </div>
+  </div>
+
+  <div id="modal-record-details" class="modal hidden">
+    <div class="modal-dialog wide record-details-modal">
+      <button type="button" class="modal-close" data-close-modal>&times;</button>
+      <div class="record-details-header">
+        <h3 id="record-details-title">Record details</h3>
+        <p id="record-details-subtitle" class="muted">Full parcel record and linked layer information</p>
+      </div>
+      <div id="record-details-body" class="record-details-body"></div>
     </div>
   </div>
 

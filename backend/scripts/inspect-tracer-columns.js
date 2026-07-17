@@ -1,21 +1,3 @@
-#!/usr/bin/env node
-const { Client } = require('pg');
-(async () => {
-  const client = new Client({
-    host: process.env.DB_HOST || 'localhost',
-    port: parseInt(process.env.DB_PORT || '5432', 10),
-    user: process.env.DB_USERNAME || 'landbook',
-    password: process.env.DB_PASSWORD || 'landbook_secret',
-    database: process.env.DB_DATABASE || 'land_bookkeeping',
-  });
-  await client.connect();
-  try {
-    const res = await client.query("SELECT column_name, data_type FROM information_schema.columns WHERE table_name='tracer_tree'");
-    console.log('Columns for tracer_tree:');
-    res.rows.forEach(r => console.log('-', r.column_name, r.data_type));
-  } catch (e) {
-    console.error('Failed to inspect columns', e);
-  } finally {
-    await client.end();
-  }
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:32c62c6cb8143a1a3f00b34dc1f1516c83100c700e4e30060e07ab208461e232
+size 796

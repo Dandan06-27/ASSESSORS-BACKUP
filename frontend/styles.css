@@ -804,6 +804,19 @@ body.auth-transitioning { overflow: hidden; }
 }
 .modal-dialog.small { width: min(800px, 100%); }
 .modal-dialog.wide { width: min(100vw, 1400px); }
+.record-details-modal { width: min(1100px, 100%); font-size: 1rem; line-height: 1.45; }
+.record-details-header { margin-bottom: 1rem; }
+.record-details-header h3 { margin: 0 0 0.25rem; }
+.record-details-body { display: flex; flex-direction: column; gap: 1rem; max-height: calc(100vh - 8rem); overflow: auto; padding-right: 0.25rem; }
+.record-details-card { border: 1px solid rgba(19, 32, 72, 0.12); border-radius: 12px; background: var(--sidebarcolor); color: var(--white); padding: 1rem; }
+.record-details-card h4 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--white); }
+.record-details-sections { display: flex; flex-direction: column; gap: 0.9rem; }
+.record-details-list { display: grid; grid-template-columns: minmax(180px, 220px) minmax(0, 1fr); gap: 0.35rem 0.75rem; }
+.record-details-row { display: contents; }
+.record-details-label { font-weight: 600; color: var(--white); word-break: break-word; }
+.record-details-value { word-break: break-word; white-space: pre-wrap; }
+.record-details-empty { margin: 0; color: var(--muted); }
+.records-table tbody tr.record-row { cursor: pointer; }
 .modal-close {
   position: absolute; right: 0.5rem; top: 0.35rem; border: none; background: none; font-size: 1.5rem; cursor: pointer;
 }
